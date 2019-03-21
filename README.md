@@ -12,4 +12,5 @@ Where do you expect to find data? Do you need help finding data? What question w
 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
-    Our idea for the final project is an analysis package about starting salaries of undergraduates from different universities in Minnesota. 
+Our idea for the final project is an analysis package about starting salaries of undergraduates, and even more specifically computer science majors, from different universities in Minnesota. Payscale.com looks like a good starting point for out data.
+
