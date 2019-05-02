@@ -1,0 +1,12 @@
+Package: midwestCSPay
+Title: What the Package Does (One Line, Title Case)
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Hayden",
+           family = "Chester",
+           role = c("aut", "cre"),
+           email = "ches8516@stthomas.edu")
+Description: midwestCSPay is an analysis package about starting salaries of undergraduates, and even more specifically computer science majors, from different universities in the MidWest.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
