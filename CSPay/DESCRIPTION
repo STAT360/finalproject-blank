@@ -10,3 +10,5 @@ Description: midwestCSPay is an analysis package about starting salaries of unde
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
