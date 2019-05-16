@@ -1,0 +1,60 @@
+---
+title: "getData"
+author: "Hayden Chester"
+date: "May 16, 2019"
+output: html_document
+---
+
+```{r}
+library(stringr)
+
+```
+
+```{r}
+library(rvest)
+library(dplyr) 
+library(purrr)
+
+url_base <- "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science"
+
+map_df(1:30, function(i) {
+  
+  cat(".")
+  
+  pg <- read_html(sprintf(url_base, i))
+  
+  data.frame(pay_low=html_text(html_nodes(pg, ".text-center")))
+  
+}) -> income
+
+map_df(1:30, function(i) {
+  
+  cat(".")
+  
+  pg <- read_html(sprintf(url_base, i))
+  
+  data.frame(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
+  
+}) -> by_school
+```
+
+```{r}
+income %>% filter(str_detect(pay_low, "\\$")) 
+
+name <- by_school$School_Name
+
+low_pay <- c()
+```
+
+
+```{r}
+for (i in 1:1500){
+  if (mod(i, 2) == 1) {
+    append(low_pay, income$pay_low[i])
+    income$pay_low[i]
+  }
+}
+
+low_pay
+
+```
