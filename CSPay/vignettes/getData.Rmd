@@ -17,8 +17,7 @@ library(here)
 ```
 
 ```{r}
-beep()
-
+beepyeah()
 url_base <- "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science"
 
 map_df(1:30, function(i) {
@@ -41,7 +40,6 @@ map_df(1:30, function(i) {
   
 }) -> by_school
 
-beep()
 ##################------- PART 2-------#########################
 money<-income %>% filter(str_detect(pay_low, "\\$")) %>% mutate(pay_low=parse_number(as.character(pay_low))) %>% pull(pay_low)
 
@@ -49,7 +47,8 @@ name <- by_school$School_Name
 
 low_pay <- c()
 
-beep()
+
+beepwhat()
 ##################------- PART 3-------#########################
 answer=c()
 answer2=c()
@@ -66,8 +65,7 @@ for (i in 1:length(money)){
 by_school$low_pay=answer
 by_school$high_pay=answer2
 
-beep(here("Audio", "yeeeeeeeah.wav")) #needs to work on a relative path level
-
+beepokay()
 ```
 
 ```{r}
