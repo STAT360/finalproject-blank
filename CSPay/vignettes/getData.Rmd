@@ -6,17 +6,17 @@ output: html_document
 ---
 
 ```{r}
-
-
-```
-
-```{r}
 library(stringr)
 library(readr)
 library(rvest)
 library(dplyr) 
 library(purrr)
 library(beepr)
+library(here)
+
+```
+
+```{r}
 beep()
 
 url_base <- "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science"
@@ -66,7 +66,7 @@ for (i in 1:length(money)){
 by_school$low_pay=answer
 by_school$high_pay=answer2
 
-beep("/CSpay/Audio/yeeeeeeeah.wav") #needs to work on a relative path level
+beep(here("Audio", "yeeeeeeeah.wav")) #needs to work on a relative path level
 
 ```
 
