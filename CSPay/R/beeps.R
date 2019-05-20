@@ -29,3 +29,4 @@ beepwhat <- function(){
 beepokay <- function(){
   beep(here("Audio", "lil-jon-okay.wav"))
 }
+
