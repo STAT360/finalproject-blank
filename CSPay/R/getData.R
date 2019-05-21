@@ -4,7 +4,7 @@
 #' @return
 #'
 #' @examples
-getData <- function(url="https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science", numberOfPages=30){
+getData <- function(url="https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/", numberOfPages=30){
   library(stringr)
   library(readr)
   library(rvest)
