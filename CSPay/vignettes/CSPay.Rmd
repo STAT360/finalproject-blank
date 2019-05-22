@@ -1,0 +1,25 @@
+---
+title: "CSPay"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CSPay}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CSPay)
+```
+
+```{r}
+
+
+
+```
