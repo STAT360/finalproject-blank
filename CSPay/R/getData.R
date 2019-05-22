@@ -11,7 +11,7 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
   library(dplyr)
   library(purrr)
   library(beepr)
-  beep()
+  beepyeah()
 
   url_base <- url
 
@@ -57,5 +57,7 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
   }
   pay_by_school$low_pay=answer
   pay_by_school$high_pay=answer2
+
+  beepokay()
 
 }

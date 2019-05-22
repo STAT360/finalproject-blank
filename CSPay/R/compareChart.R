@@ -1,7 +1,7 @@
 library(forcats)
 library(ggplot2)
 
-#' Title: GetPayFunction
+#' Title: compareChart
 #'
 #' @param school Name
 #' @return

@@ -9,3 +9,6 @@ beepokay()
 \description{
 Title
 }
+\examples{
+beepokay()
+}

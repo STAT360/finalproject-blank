@@ -9,3 +9,6 @@ beepyeah()
 \description{
 Title
 }
+\examples{
+beepyeah()
+}

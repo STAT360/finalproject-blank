@@ -16,51 +16,5 @@ library(here)
 ```
 
 ```{r}
-beepyeah()
-url_base <- "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/"
-
-map_dfr(1:30, function(i) {
-  
-  cat(".")
-  
-  pg <- read_html(paste0(url_base, i))
-  tibble(pay_low=as.character(html_text(html_nodes(pg, ".text-center"))))
-  
-}) -> income
-
-beepwhat()
-
-map_df(1:30, function(i) {
-  
-  cat(".")
-  
-  pg <- read_html(paste0(url_base, i))
-  
-  tibble(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
-  
-}) -> pay_by_school
-
-##################------- PART 2-------#########################
-money<-income %>% filter(str_detect(pay_low, "\\$")) %>% mutate(pay_low=parse_number(as.character(pay_low))) %>% pull(pay_low)
-
-name <- pay_by_school$School_Name
-
-low_pay <- c()
-
-
-##################------- PART 3-------#########################
-answer=c()
-answer2=c()
-for (i in 1:length(money)){
-  if ((Mod(i)%%2) == 1) {
-    answer[ceiling(i/2)]<-money[i]
-  }
-  else{
-    answer2[i/2]<-money[i]
-  }
-}
-pay_by_school$low_pay=answer
-pay_by_school$high_pay=answer2
-
-beepokay()
+getData()
 ```

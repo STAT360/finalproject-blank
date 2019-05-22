@@ -5,7 +5,7 @@ library(beepr)
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples beepyeah()
 beepyeah <- function(){
   beep(here("Audio", "yeeeeeeeah.wav"))
 }
@@ -15,7 +15,7 @@ beepyeah <- function(){
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples beepwhat()
 beepwhat <- function(){
   beep(here("Audio", "lil-jon-what.wav"))
 }
@@ -25,7 +25,7 @@ beepwhat <- function(){
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples beepokay()
 beepokay <- function(){
   beep(here("Audio", "lil-jon-okay.wav"))
 }

@@ -9,3 +9,6 @@ beepwhat()
 \description{
 Title
 }
+\examples{
+beepwhat()
+}
