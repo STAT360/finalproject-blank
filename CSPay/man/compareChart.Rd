@@ -2,17 +2,14 @@
 % Please edit documentation in R/compareChart.R
 \name{compareChart}
 \alias{compareChart}
-\title{Title: compareChart}
+\title{Title}
 \usage{
 compareChart(school = "University of St Thomas (Minnesota)",
   whichPay = "low_pay")
 }
 \arguments{
-\item{school}{Name}
+\item{whichPay}{}
 }
 \description{
-Title: compareChart
-}
-\examples{
-: getGraph(University of St Thomas (Minnesota))
+Title
 }

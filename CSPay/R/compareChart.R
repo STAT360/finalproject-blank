@@ -1,13 +1,16 @@
 library(forcats)
 library(ggplot2)
 
-#' Title: compareChart
-#'
-#' @param school Name
-#' @return
-#'
-#' @examples: getGraph(University of St Thomas (Minnesota))
 
+#' Title
+#'
+#' @param school
+#' @param whichPay
+#'
+#' @return
+#' @export
+#'
+#' @examples
 compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="low_pay"){
   if(length(which(pay_by_school$School_Name==school))==0){
     stop("Error: School is not found")
@@ -42,7 +45,12 @@ compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="
   schoolPosition <- schoolPosition %>%
     mutate(School_Name = fct_reorder(School_Name, !! sym(whichPay)))
 
-  ggplot(schoolPosition) + geom_col(aes(x=School_Name, y=!! sym(whichPay), fill=colhighlight)) +  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +coord_flip()
+  ggplot(schoolPosition, aes(x=School_Name, y=!! sym(whichPay), label =!! sym(whichPay), fill=colhighlight)) +
+    geom_col() +
+    geom_text(hjust=1.5, position = position_dodge(0.9))+
+    theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+    coord_flip()
+
 
 }
 
