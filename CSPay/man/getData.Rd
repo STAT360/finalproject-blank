@@ -5,7 +5,8 @@
 \title{Title: GetPayFunction}
 \usage{
 
-  getData(url = "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science")
+  getData(url = "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/",
+  numberOfPages = 30)
 }
 \description{
 Title: GetPayFunction

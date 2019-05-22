@@ -2,13 +2,17 @@
 % Please edit documentation in R/compareChart.R
 \name{compareChart}
 \alias{compareChart}
-\title{Title}
+\title{Title: GetPayFunction}
 \usage{
-compareChart(school, spread = 5, min = TRUE, max = TRUE)
+compareChart(school = "University of St Thomas (Minnesota)",
+  whichPay = "low_pay")
 }
 \arguments{
-\item{max}{}
+\item{school}{Name}
 }
 \description{
-Title
+Title: GetPayFunction
+}
+\examples{
+: getGraph(University of St Thomas (Minnesota))
 }
