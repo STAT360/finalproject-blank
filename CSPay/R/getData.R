@@ -20,7 +20,7 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
     cat(".")
 
     pg <- read_html(paste0(url_base, i))
-    data.frame(pay_low=html_text(html_nodes(pg, ".text-center")))
+    tibble(pay_low=html_text(html_nodes(pg, ".text-center")))
 
   }) -> income
 
@@ -32,7 +32,7 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
 
     pg <- read_html(paste0(url_base, i))
 
-    data.frame(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
+    tibble(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
 
   }) -> pay_by_school
 

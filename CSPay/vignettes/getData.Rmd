@@ -19,12 +19,12 @@ library(here)
 beepyeah()
 url_base <- "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/"
 
-map_df(1:30, function(i) {
+map_dfr(1:30, function(i) {
   
   cat(".")
   
   pg <- read_html(paste0(url_base, i))
-  data.frame(pay_low=html_text(html_nodes(pg, ".text-center")))
+  tibble(pay_low=as.character(html_text(html_nodes(pg, ".text-center"))))
   
 }) -> income
 
@@ -36,7 +36,7 @@ map_df(1:30, function(i) {
   
   pg <- read_html(paste0(url_base, i))
   
-  data.frame(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
+  tibble(School_Name=html_text(html_nodes(pg, ".datatable-logo")))
   
 }) -> pay_by_school
 
