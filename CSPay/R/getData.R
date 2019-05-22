@@ -37,7 +37,7 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
   }) -> pay_by_school
 
   ##################------- PART 2-------#########################
-  money<-income %>% filter(str_detect(pay_low, "\\$")) %>% mutate(pay_low=parse_number(as.character(pay_low))) %>% pull(pay_low)
+  money<-income %>%mutate(as.character(pay_low)) %>%  filter(str_detect(pay_low, "\\$")) %>% mutate(pay_low=parse_number(pay_low)) %>% pull(pay_low)
 
   name <- pay_by_school$School_Name
 
