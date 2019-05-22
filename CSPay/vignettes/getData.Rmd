@@ -1,20 +1,16 @@
 ---
 title: "getData"
-author: "Hayden Chester"
+author: "Team Blank"
 date: "May 16, 2019"
 output: html_document
 ---
 
-```{r}
-library(stringr)
-library(readr)
-library(rvest)
-library(dplyr) 
-library(purrr)
-library(beepr)
-library(here)
-```
+# Using the default paramaters from the getData function gets the data from all of the pages of pay for computer science majors from payscale.com
 
 ```{r}
+library(CSPay)
+library(here)
 getData()
+pay_by_school
 ```
+# The parameters can be modified to get data from different majors by changing the url and number of pages to scrape data.

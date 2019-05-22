@@ -2,12 +2,15 @@
 % Please edit documentation in R/getData.R
 \name{getData}
 \alias{getData}
-\title{Title: GetPayFunction}
+\title{Title}
 \usage{
 
   getData(url = "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/",
   numberOfPages = 30)
 }
+\arguments{
+\item{numberOfPages}{}
+}
 \description{
-Title: GetPayFunction
+Title
 }

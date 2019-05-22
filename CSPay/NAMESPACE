@@ -3,3 +3,4 @@
 export(beepokay)
 export(beepwhat)
 export(beepyeah)
+export(getData)
