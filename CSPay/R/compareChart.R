@@ -2,7 +2,7 @@ library(forcats)
 library(ggplot2)
 
 
-#' Title
+#' Title: CompareChart Function
 #'
 #' @param school
 #' @param whichPay
@@ -10,7 +10,7 @@ library(ggplot2)
 #' @return
 #' @export
 #'
-#' @examples
+#' @examples: compareChart("Stanford University","low_pay")
 compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="low_pay"){
   if(length(which(pay_by_school$School_Name==school))==0){
     stop("Error: School is not found")
@@ -50,7 +50,6 @@ compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="
     geom_text(hjust=1.5, position = position_dodge(0.9))+
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
     coord_flip()
-
 
 }
 
