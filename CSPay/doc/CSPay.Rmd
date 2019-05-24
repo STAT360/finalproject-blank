@@ -1,0 +1,63 @@
+---
+title: "CSPay"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CSPay}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Motivation
+### We wanted to figure out how much money different computer science majors would make coming out of different colleges
+
+```{r setup}
+library(CSPay)
+```
+
+## Running the getData() function without any parameters will scrape all of the data available from payscale for average pay for computer science graduates.
+### Data for different majors can be scraped my modifying the url parameter to the appropriate url from payscale.com for the specific url you are interested in. You can also modify the number of pages scraped by modifying the pages variable
+```{r}
+computerSciencePay <- getData()
+head(computerSciencePay)
+```
+
+## Best school compare chart ...
+```{r, fig.width=5}
+compareChart(df = computerSciencePay, school = "Stanford University")
+```
+
+## ... University of St. Thomas ...
+```{r, fig.width=5}
+compareChart(computerSciencePay)
+```
+
+## ... Worst
+```{r, fig.width=5}
+compareChart(df = computerSciencePay, school = "Ferrum College")
+```
+
+##Generate a budget based on low_pay salary (default school is St. Thomas)
+```{r}
+low_budget <- getBudget(computerSciencePay) 
+low_budget
+```
+
+##Generate a budget based on high_pay salary (default school is St. Thomas)
+```{r}
+high_budget <- getBudget(computerSciencePay, low_pay = FALSE) 
+high_budget
+```
+
+## Extended functionality of the beepr package ft. lil Jon https://www.youtube.com/watch?v=sSkRdO9K1og
+```{r}
+beepyeah()
+beepwhat()
+beepokay()
+```
