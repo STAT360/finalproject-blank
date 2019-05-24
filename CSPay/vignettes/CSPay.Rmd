@@ -16,11 +16,37 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(CSPay)
+library(here)
+library(beepr)
+library(forcats)
+library(ggplot2)
 ```
 
-
+## Running the getData() function without any parameters will scrape all of the data available from payscale for average pay for computer science graduates.
+### Data for different majors can be scraped my modifying the url parameter to the appropriate url from payscale.com for the specific url you are interested in. You can also modify the number of pages scraped by modifying the pages variable
 ```{r}
+computerSciencePay <- getData()
+head(computerSciencePay)
+```
 
+## Best school compare chart ...
+```{r, fig.width=5}
+compareChart(df = computerSciencePay, school = "Stanford University")
+```
 
+## ... University of St. Thomas ...
+```{r, fig.width=6}
+compareChart(computerSciencePay)
+```
 
+## ... Worst
+```{r, fig.width=5}
+compareChart(df = computerSciencePay, school = "Ferrum College")
+```
+
+## Extended functionality of the beepr package ft. lil Jon https://www.youtube.com/watch?v=sSkRdO9K1og
+```{r}
+beepyeah()
+beepwhat()
+beepokay()
 ```
