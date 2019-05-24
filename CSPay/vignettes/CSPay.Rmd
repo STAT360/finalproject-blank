@@ -14,12 +14,11 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Motivation
+### We wanted to figure out how much money different computer science majors would make coming out of different colleges
+
 ```{r setup}
 library(CSPay)
-library(here)
-library(beepr)
-library(forcats)
-library(ggplot2)
 ```
 
 ## Running the getData() function without any parameters will scrape all of the data available from payscale for average pay for computer science graduates.
@@ -35,13 +34,25 @@ compareChart(df = computerSciencePay, school = "Stanford University")
 ```
 
 ## ... University of St. Thomas ...
-```{r, fig.width=6}
+```{r, fig.width=5}
 compareChart(computerSciencePay)
 ```
 
 ## ... Worst
 ```{r, fig.width=5}
 compareChart(df = computerSciencePay, school = "Ferrum College")
+```
+
+##Generate a budget based on low_pay salary (default school is St. Thomas)
+```{r}
+low_budget <- getBudget(computerSciencePay) 
+low_budget
+```
+
+##Generate a budget based on high_pay salary (default school is St. Thomas)
+```{r}
+high_budget <- getBudget(computerSciencePay, low_pay = FALSE) 
+high_budget
 ```
 
 ## Extended functionality of the beepr package ft. lil Jon https://www.youtube.com/watch?v=sSkRdO9K1og

@@ -7,7 +7,7 @@
 beepwhat()
 }
 \value{
-Plays lil Jon saying "What"
+NULL #Plays lil Jon saying "What"
 }
 \description{
 beepwhat

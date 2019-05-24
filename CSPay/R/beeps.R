@@ -2,7 +2,7 @@ library(here)
 library(beepr)
 #' beepyeah
 #'
-#' @return Plays lil Jon saying "Yeah"
+#' @return NULL #Plays lil Jon saying "Yeah"
 #' @export
 #'
 #' @examples beepyeah()
@@ -12,7 +12,7 @@ beepyeah <- function(){
 
 #' beepwhat
 #'
-#' @return Plays lil Jon saying "What"
+#' @return NULL #Plays lil Jon saying "What"
 #' @export
 #'
 #' @examples beepwhat()
@@ -22,7 +22,7 @@ beepwhat <- function(){
 
 #' beepokay
 #'
-#' @return Plays lil Jon saying "Okay"
+#' @return NULL #Plays lil Jon saying "Okay"
 #' @export
 #'
 #' @examples beepokay()

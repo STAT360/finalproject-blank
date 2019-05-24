@@ -2,15 +2,24 @@
 % Please edit documentation in R/getData.R
 \name{getData}
 \alias{getData}
-\title{Title}
+\title{getData}
 \usage{
 
   getData(url = "https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/",
   numberOfPages = 30)
 }
 \arguments{
-\item{numberOfPages}{}
+\item{url}{The url base that the function should scrape from}
+
+\item{numberOfPages}{The numebr of pages to scrape}
+}
+\value{
+Tibble of the scrapped data
 }
 \description{
-Title
+This function is used to scrape data from payscale.com. Data for different majors can be scraped my modifying the url parameter to the appropriate url from payscale.com for the specific major you are interested in. You can also modify the number of pages scraped by modifying the numberOfPages variable.
+}
+\examples{
+getData(url="https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/", numberOfPages=30)
+getData()
 }

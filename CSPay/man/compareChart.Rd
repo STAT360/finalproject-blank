@@ -2,17 +2,24 @@
 % Please edit documentation in R/compareChart.R
 \name{compareChart}
 \alias{compareChart}
-\title{Title: CompareChart Function}
+\title{compareChart}
 \usage{
 compareChart(df, school = "University of St Thomas (Minnesota)",
   whichPay = "low_pay")
 }
 \arguments{
-\item{whichPay}{}
+\item{df}{The dataframe of pay amount by different universities}
+
+\item{school}{The school you would like to compare to others}
+
+\item{whichPay}{either "low_pay" or "high_pay"}
+}
+\value{
+NULL #Displays graph
 }
 \description{
-Title: CompareChart Function
+This function is used to generate a bar chart of the indicated salary type (low or high) of schools that are closest to it as well as the school with the highest and lwoest average salay
 }
 \examples{
-: compareChart("Stanford University","low_pay")
+: compareChart(df = computerSciencePay,"Stanford University","low_pay")
 }

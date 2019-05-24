@@ -2,15 +2,17 @@ library(forcats)
 library(ggplot2)
 
 
-#' Title: CompareChart Function
+#' compareChart
 #'
-#' @param school
-#' @param whichPay
+#' This function is used to generate a bar chart of the indicated salary type (low or high) of schools that are closest to it as well as the school with the highest and lwoest average salay
+#' @param school The school you would like to compare to others
+#' @param whichPay either "low_pay" or "high_pay"
+#' @param df The dataframe of pay amount by different universities
 #'
-#' @return
+#' @return NULL #Displays graph
 #' @export
 #'
-#' @examples: compareChart("Stanford University","low_pay")
+#' @examples: compareChart(df = computerSciencePay,"Stanford University","low_pay")
 compareChart <- function(df, school='University of St Thomas (Minnesota)',whichPay="low_pay"){
   if(length(which(df$School_Name==school))==0){
     stop("Error: School is not found")

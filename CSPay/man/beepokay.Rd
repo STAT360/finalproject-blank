@@ -7,7 +7,7 @@
 beepokay()
 }
 \value{
-Plays lil Jon saying "Okay"
+NULL #Plays lil Jon saying "Okay"
 }
 \description{
 beepokay

@@ -7,7 +7,7 @@
 beepyeah()
 }
 \value{
-Plays lil Jon saying "Yeah"
+NULL #Plays lil Jon saying "Yeah"
 }
 \description{
 beepyeah

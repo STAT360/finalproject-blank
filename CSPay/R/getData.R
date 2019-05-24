@@ -1,12 +1,14 @@
-#' Title
+#' getData
 #'
-#' @param url
-#' @param numberOfPages
+#' This function is used to scrape data from payscale.com. Data for different majors can be scraped my modifying the url parameter to the appropriate url from payscale.com for the specific major you are interested in. You can also modify the number of pages scraped by modifying the numberOfPages variable.
+#' @param url The url base that the function should scrape from
+#' @param numberOfPages The numebr of pages to scrape
 #'
-#' @return
+#' @return Tibble of the scrapped data
 #' @export
 #'
-#' @examples
+#' @examples getData(url="https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/", numberOfPages=30)
+#' getData()
 getData <- function(url="https://www.payscale.com/college-salary-report/best-schools-by-majors/computer-science/", numberOfPages=30){
   library(stringr)
   library(readr)
