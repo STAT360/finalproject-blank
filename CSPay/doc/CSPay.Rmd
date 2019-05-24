@@ -15,14 +15,14 @@ knitr::opts_chunk$set(
 ```
 
 ## Motivation
-### We wanted to figure out how much money different computer science majors would make coming out of different colleges
+### We wanted to figure out how much money different computer science majors would make coming out of different colleges.
 
 ```{r setup}
 library(CSPay)
 ```
 
 ## Running the getData() function without any parameters will scrape all of the data available from payscale for average pay for computer science graduates.
-### Data for different majors can be scraped my modifying the url parameter to the appropriate url from payscale.com for the specific url you are interested in. You can also modify the number of pages scraped by modifying the pages variable
+### Data for different majors can be scraped by modifying the url parameter to the appropriate url from payscale.com for the specific url you are interested in. You can also modify the number of pages scraped by modifying the pages variable.
 ```{r}
 computerSciencePay <- getData()
 head(computerSciencePay)
@@ -56,7 +56,7 @@ high_budget <- getBudget(computerSciencePay, low_pay = FALSE)
 high_budget
 ```
 
-## Extended functionality of the beepr package ft. lil Jon https://www.youtube.com/watch?v=sSkRdO9K1og
+## Extended functionality of the beepr package ft. Lil Jon https://www.youtube.com/watch?v=sSkRdO9K1og
 ```{r}
 beepyeah()
 beepwhat()
