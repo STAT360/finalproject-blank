@@ -1,8 +1,8 @@
 library(here)
 library(beepr)
-#' Title
+#' beepyeah
 #'
-#' @return
+#' @return Plays lil Jon saying "Yeah"
 #' @export
 #'
 #' @examples beepyeah()
@@ -10,9 +10,9 @@ beepyeah <- function(){
   beep(here("Audio", "yeeeeeeeah.wav"))
 }
 
-#' Title
+#' beepwhat
 #'
-#' @return
+#' @return Plays lil Jon saying "What"
 #' @export
 #'
 #' @examples beepwhat()
@@ -20,9 +20,9 @@ beepwhat <- function(){
   beep(here("Audio", "lil-jon-what.wav"))
 }
 
-#' Title
+#' beepokay
 #'
-#' @return
+#' @return Plays lil Jon saying "Okay"
 #' @export
 #'
 #' @examples beepokay()

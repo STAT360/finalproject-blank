@@ -2,7 +2,7 @@
 % Please edit documentation in R/compareChart.R
 \name{compareChart}
 \alias{compareChart}
-\title{Title}
+\title{Title: CompareChart Function}
 \usage{
 compareChart(df, school = "University of St Thomas (Minnesota)",
   whichPay = "low_pay")
@@ -11,5 +11,8 @@ compareChart(df, school = "University of St Thomas (Minnesota)",
 \item{whichPay}{}
 }
 \description{
-Title
+Title: CompareChart Function
+}
+\examples{
+: compareChart("Stanford University","low_pay")
 }

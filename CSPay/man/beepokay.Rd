@@ -2,12 +2,15 @@
 % Please edit documentation in R/beeps.R
 \name{beepokay}
 \alias{beepokay}
-\title{Title}
+\title{beepokay}
 \usage{
 beepokay()
 }
+\value{
+Plays lil Jon saying "Okay"
+}
 \description{
-Title
+beepokay
 }
 \examples{
 beepokay()
