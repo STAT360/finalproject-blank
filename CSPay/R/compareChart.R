@@ -11,8 +11,8 @@ library(ggplot2)
 #' @export
 #'
 #' @examples: compareChart("Stanford University","low_pay")
-compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="low_pay"){
-  if(length(which(pay_by_school$School_Name==school))==0){
+compareChart <- function(df, school='University of St Thomas (Minnesota)',whichPay="low_pay"){
+  if(length(which(df$School_Name==school))==0){
     stop("Error: School is not found")
   }
   if(identical(whichPay,"low_pay")==FALSE&&identical(whichPay,"high_pay")==FALSE){
@@ -22,13 +22,13 @@ compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="
   #
   # }
 
-  schoolPosition <- pay_by_school %>%
+  schoolPosition <- df %>%
     arrange(desc(!! sym(whichPay)))
 
   lowvalue <- which(schoolPosition$School_Name == school)-5
   highvalue <- which(schoolPosition$School_Name == school)+5
   includetop <- 1
-  includebottom <- dim(pay_by_school)[1]
+  includebottom <- dim(df)[1]
 
   if(lowvalue<0){
     lowvalue <- 1
@@ -49,7 +49,7 @@ compareChart <- function(school='University of St Thomas (Minnesota)',whichPay="
     geom_col() +
     geom_text(hjust=1.5, position = position_dodge(0.9))+
     theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
-    coord_flip()
+    coord_flip() + scale_fill_discrete(guide = FALSE)
 
 }
 
