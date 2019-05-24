@@ -4,7 +4,7 @@
 \alias{compareChart}
 \title{Title}
 \usage{
-compareChart(school = "University of St Thomas (Minnesota)",
+compareChart(df, school = "University of St Thomas (Minnesota)",
   whichPay = "low_pay")
 }
 \arguments{
