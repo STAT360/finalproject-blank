@@ -61,7 +61,6 @@ getData <- function(url="https://www.payscale.com/college-salary-report/best-sch
   pay_by_school$low_pay=answer
   pay_by_school$high_pay=answer2
 
-  print("Tibble created named pay_by_school")
   beepokay()
-
+  return(pay_by_school)
 }
