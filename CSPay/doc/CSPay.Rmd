@@ -28,6 +28,7 @@ computerSciencePay <- getData()
 head(computerSciencePay)
 ```
 
+## compareChart() creates a bar graph of selected pay for a selected university as well as five universities above, five univrsities below, the highest, and the lowest.
 ## Best school compare chart ...
 ```{r, fig.width=5}
 compareChart(df = computerSciencePay, school = "Stanford University")
